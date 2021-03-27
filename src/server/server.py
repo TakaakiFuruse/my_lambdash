@@ -1,3 +1,4 @@
+import awsgi
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
@@ -32,5 +33,6 @@ app.layout = html.Div(
     ]
 )
 
-if __name__ == "__main__":
-    app.run_server()
+
+def handler(event, context):
+    return awsgi.response(server, event, context, base64_content_types={"image/png"})

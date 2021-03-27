@@ -7,6 +7,6 @@ from src.lambda_stack import LambdaStack
 
 app = cdk.App()
 stack = MyLambdashStack(app, "MyLambdashStack")
-LambdaStack(app, "LambdaStack", stack)
+lambdash = LambdaStack(app, "LambdaStack", stack)
 
 app.synth()

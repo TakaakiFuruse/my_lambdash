@@ -80,6 +80,6 @@ class LambdaStack(cdk.Stack):
 
         apigateway.LambdaRestApi(
             self,
-            "Endpoint",
+            "Lambdash-Endpoint",
             handler=lambda_func,
         )
